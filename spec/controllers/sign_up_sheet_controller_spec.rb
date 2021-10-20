@@ -364,7 +364,7 @@ describe SignUpSheetController do
       expect(response).to redirect_to('/assignments/2/edit')
     end
 
-    it 'deletes all topics for not private assignment and redirects to edit assignment page' do
+    it 'deletes all topics for the non private assignment and redirects to edit assignment page' do
       create(:topic, id: 2, assignment_id: 3)
       create(:topic, id: 3, assignment_id: 3)
       params = {assignment_id: 3}
